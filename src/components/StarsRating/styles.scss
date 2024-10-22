@@ -1,9 +1,11 @@
 .container {
     .active {
-
+        color: #fff700;
+        cursor: pointer;
     }
 
     .inactive {
-        
+        color: black;
+        cursor: pointer;
     }
 }

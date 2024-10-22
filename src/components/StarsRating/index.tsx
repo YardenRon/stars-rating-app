@@ -27,12 +27,14 @@ const StarsRating = (props: StarsRatingProps) => {
         <div className="container">
             {
                 [...Array(starsNumber)].map((_, index) => {
+                    index += 1;
+
                     return <FaStar
                         key={index}
                         className={index <= (hover || rating)? 'active' : 'inactive'}
                         size={40}
-                        onClick={() => onStarClick(index + 1)}
-                        onMouseMove={() => onStarMouseMove(index + 1)}
+                        onClick={() => onStarClick(index)}
+                        onMouseMove={() => onStarMouseMove(index)}
                         onMouseLeave={onStarMouseLeave}
                     />;
                 })
